@@ -1,0 +1,27 @@
+{
+  "name": "post-comment",
+  "version": "1.0.0",
+  "description": "Post a comment on an issue or pull request",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "pack": "ncc build"
+  },
+  "keywords": [
+    "github",
+    "action",
+    "comment"
+  ],
+  "author": "Marty Zalega <m.zalega@arkoselabs.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0",
+    "@actions/glob": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.11",
+    "@vercel/ncc": "^0.32.0",
+    "typescript": "^4.5.2"
+  }
+}

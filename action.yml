@@ -1,0 +1,57 @@
+name: Post Comment
+description: |
+  Post a comment on an issue or pull request. The body of the comment can be
+  passed or read from one or more files. If the body is empty then a comment
+  wont be posted.
+
+branding:
+  icon: message-square
+  color: green
+
+inputs:
+  repo-token:
+    description: The Github token to use. Defaults to the workflow's token.
+    default: ${{ github.token }}
+    required: false
+  issue-number:
+    description: The issue or pull request number. If blank and the event is pull request it will use that.
+    default: ''
+    required: false
+  owner:
+    description: The repository owner. Defaults to current repository owner.
+    default: ''
+    required: false
+  repo:
+    description: The repository. Defaults to current repository.
+    default: ${{ github.repository }}
+    required: false
+  content:
+    description: The body of the comment.
+    default: ''
+    required: false
+  path:
+    description: The path of the file containing the comment. Can be a list of files or a file glob. Multiple files will be concatenated together.
+    default: ''
+    required: false
+  header:
+    description: The comment header.
+    default: ''
+    required: false
+  footer:
+    description: The comment footer.
+    default: ''
+    required: false
+  skip-label:
+    description: Skips posting comment if label is present. Leave blank to disable.
+    default: no comment
+    required: false
+
+outputs:
+  comment-id:
+    description: The comment ID.
+  posted:
+    description: A boolean indicating whether a comment was posted.
+
+runs:
+  using: node12
+  main: dist/index.js

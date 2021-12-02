@@ -1,2 +1,2 @@
 # post-comment-action
-Post a comment on an issue or pull request
+Post a comment on an issue or pull request.
