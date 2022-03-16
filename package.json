@@ -2,6 +2,7 @@
   "name": "post-comment",
   "version": "1.0.0",
   "description": "Post a comment on an issue or pull request",
+  "private": true,
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
