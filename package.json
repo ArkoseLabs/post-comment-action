@@ -16,7 +16,7 @@
   "author": "Marty Zalega <m.zalega@arkoselabs.com>",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.6.0",
+    "@actions/core": "^1.9.1",
     "@actions/github": "^5.0.0",
     "@actions/glob": "^0.2.0"
   },
